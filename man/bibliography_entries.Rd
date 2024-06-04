@@ -21,25 +21,6 @@ generating a reference section in a document.
 Given a bibliography file, this function will generate bibliographic entries
 for one or more types of bib entry.
 }
-\examples{
-\dontshow{if (rmarkdown::pandoc_available("2.7")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-# Create a bibliography from a set of packages
-bib <- tempfile(fileext = ".bib")
-knitr::write_bib(c("vitae", "tibble"), bib)
-
-# Import the bibliography entries into a CV
-bibliography_entries(bib)
-
-# The order of these entries can be customised using `dplyr::arrange()`
-bibliography_entries(bib) \%>\%
-  arrange(desc(title))
-
-# For more complex fields like author, you can also sort by component fields.
-# For example, use `author$family` to sort by family names.
-bibliography_entries(bib) \%>\%
-  arrange(desc(author$family))
-\dontshow{\}) # examplesIf}
-}
 \author{
 Mitchell O'Hara-Wild & Rob J Hyndman
 }
