@@ -64,6 +64,10 @@ Currently, the YAML header allows these fields to be specified:
 - `docname`: Control the document name (typically curriculum vitae, or résumé)
 
 
+The `vitae::twentyseconds` template has an additional argument `skills` that is a list of skills as a character in the format "Skill/Value" with the value ranging from 0 to 6.
+
+`r htmltools::pre(htmltools::code(paste0(readLines("sample_twentyseconds.txt")[1:15],collapse = "\n")))`
+
 ### The document body
 
 Like other R Markdown documents, the body allows you to mix R code with markdown to create the main content for your document. Below is an example of the start for a typical CV:
